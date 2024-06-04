@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-04T11:08:47.752998" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="c:\Users\User SC Pro\Desktop\test2\login_test.robot">
+<test id="s1-t1" name="Valid Login Test" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-04T11:08:50.395951" level="INFO">Opening browser 'chrome' to base url 'https://shopee.co.th/buyer/login?next=https%3A%2F%2Fshopee.co.th%2F'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-04T11:08:50.391887" elapsed="24.746038"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-04T11:09:15.166349" level="INFO">Typing text 'testuser' into text field 'Xpath=//input[@type='text']'.</msg>
+<arg>Xpath=//input[@type='text']</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T11:09:15.161828" elapsed="2.192835"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-04T11:09:17.361872" level="INFO">Typing text 'password123' into text field 'Xpath=//input[@type='password']'.</msg>
+<arg>Xpath=//input[@type='password']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T11:09:17.359321" elapsed="0.879561"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-04T11:09:18.242948" level="INFO">Clicking button 'xpath=//button[contains(text(), 'เข้าสู่ระบบ')]'.</msg>
+<arg>xpath=//button[contains(text(), 'เข้าสู่ระบบ')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T11:09:18.240908" elapsed="0.620530"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-06-04T11:09:29.006021" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.141)
+Stacktrace:
+	GetHandleVerifier [0x00007FF674B71F22+60322]
+	(No symbol) [0x00007FF674AECE99]
+	(No symbol) [0x00007FF6749A7EBA]
+	(No symbol) [0x00007FF67497D5A5]
+	(No symbol) [0x00007FF674A236B7]
+	(No symbol) [0x00007FF674A3B331]
+	(No symbol) [0x00007FF674A1BFC3]
+	(No symbol) [0x00007FF6749E9617]
+	(No symbol) [0x00007FF6749EA211]
+	GetHandleVerifier [0x00007FF674E8946D+3301613]
+	GetHandleVerifier [0x00007FF674ED3693+3605267]
+	GetHandleVerifier [0x00007FF674EC9410+3563664]
+	GetHandleVerifier [0x00007FF674C242F6+790390]
+	(No symbol) [0x00007FF674AF74DF]
+	(No symbol) [0x00007FF674AF33D4]
+	(No symbol) [0x00007FF674AF3562]
+	(No symbol) [0x00007FF674AE2F6F]
+	BaseThreadInitThunk [0x00007FFEC597257D+29]
+	RtlUserThreadStart [0x00007FFEC626AA48+40]
+</msg>
+<msg time="2024-06-04T11:09:29.624719" level="FAIL">Element 'id=welcome_message' not visible after 10 seconds.</msg>
+<arg>id=welcome_message</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-06-04T11:09:18.864676" elapsed="11.350501">Element 'id=welcome_message' not visible after 10 seconds.</status>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>id=welcome_message</arg>
+<arg>Welcome, ${USERNAME}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2024-06-04T11:09:30.219762" elapsed="0.003682"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-04T11:09:30.227950" elapsed="2.943852"/>
+</kw>
+<doc>Test to log in with valid credentials</doc>
+<status status="FAIL" start="2024-06-04T11:08:50.337387" elapsed="42.835405">Element 'id=welcome_message' not visible after 10 seconds.</status>
+</test>
+<status status="FAIL" start="2024-06-04T11:08:47.784104" elapsed="45.393187"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login Test">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-04T11:09:29.006021" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=125.0.6422.141)
+Stacktrace:
+	GetHandleVerifier [0x00007FF674B71F22+60322]
+	(No symbol) [0x00007FF674AECE99]
+	(No symbol) [0x00007FF6749A7EBA]
+	(No symbol) [0x00007FF67497D5A5]
+	(No symbol) [0x00007FF674A236B7]
+	(No symbol) [0x00007FF674A3B331]
+	(No symbol) [0x00007FF674A1BFC3]
+	(No symbol) [0x00007FF6749E9617]
+	(No symbol) [0x00007FF6749EA211]
+	GetHandleVerifier [0x00007FF674E8946D+3301613]
+	GetHandleVerifier [0x00007FF674ED3693+3605267]
+	GetHandleVerifier [0x00007FF674EC9410+3563664]
+	GetHandleVerifier [0x00007FF674C242F6+790390]
+	(No symbol) [0x00007FF674AF74DF]
+	(No symbol) [0x00007FF674AF33D4]
+	(No symbol) [0x00007FF674AF3562]
+	(No symbol) [0x00007FF674AE2F6F]
+	BaseThreadInitThunk [0x00007FFEC597257D+29]
+	RtlUserThreadStart [0x00007FFEC626AA48+40]
+</msg>
+</errors>
+</robot>
